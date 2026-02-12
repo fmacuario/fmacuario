@@ -48,9 +48,10 @@ body{
     text-align: center;
     transition: 0.3s;
     display: inline-block;
+    cursor: pointer;
 }
 
-/* Botones Correo y WhatsApp */
+/* Botones pequeños */
 .contact-btn.small {
     padding: 5px 12px;
     font-size: 12px;
@@ -66,7 +67,7 @@ body{
     background-color: #128C7E;
 }
 
-/* Correo */
+/* Correo Gmail web */
 .contact-btn.gmail-btn {
     background-color: #0072C6;
 }
@@ -74,7 +75,7 @@ body{
     background-color: #005A99;
 }
 
-/* Botón Donación */
+/* Donación */
 .contact-btn.donation-btn {
     background-color: red;
     color: black;
@@ -91,7 +92,7 @@ body{
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 10000; 
+    z-index: 100000; 
     left: 0;
     top: 0;
     width: 100%;
@@ -146,14 +147,14 @@ body{
 
 <!-- Botones -->
 <div class="contact-container">
-    <!-- Gmail web directamente -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com" target="_blank" class="contact-btn gmail-btn small">Correo</a>
+    <!-- Gmail web -->
+    <div class="contact-btn gmail-btn small" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com','_blank')">Correo</div>
 
     <!-- WhatsApp -->
     <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn small">WhatsApp</a>
 
     <!-- Donación modal -->
-    <a href="#" class="contact-btn donation-btn" onclick="abrirModal(); return false;">Donación</a>
+    <div class="contact-btn donation-btn" onclick="abrirModal()">Donación</div>
 </div>
 
 <!-- Modal Donación -->
