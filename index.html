@@ -35,7 +35,6 @@ body {
     cursor: pointer;
     user-select: none;
     min-width: 120px;
-    text-decoration: none;
 }
 
 /* Colores específicos */
@@ -53,19 +52,19 @@ body {
 
 <div class="contact-container">
     <!-- Correo Gmail web -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com" target="_blank" class="contact-btn gmail-btn">
+    <div class="contact-btn gmail-btn" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com','_blank')">
         Correo
-    </a>
+    </div>
 
     <!-- WhatsApp -->
-    <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn whatsapp-btn">
+    <div class="contact-btn whatsapp-btn" onclick="window.open('https://wa.me/5491165344239','_blank')">
         WhatsApp
-    </a>
+    </div>
 
     <!-- Donación Mercado Pago -->
-    <a href="https://www.mercadopago.com.ar/herramientas/donaciones" target="_blank" class="contact-btn donation-btn">
+    <div class="contact-btn donation-btn" onclick="window.open('https://www.mercadopago.com.ar/herramientas/donaciones','_blank')">
         Donación
-    </a>
+    </div>
 </div>
 
 </body>
