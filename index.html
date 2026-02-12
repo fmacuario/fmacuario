@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <title>FM Acuario 99.1</title>
 <style>
-body{
+body {
     margin:0;
     height:100vh;
     background:url("fondo.jpg") no-repeat center center;
     background-size:cover;
     font-family:Arial, sans-serif;
 }
+
+/* Contenedor botones */
 .contact-container {
     position: fixed;
     bottom: 30px;
@@ -21,8 +23,10 @@ body{
     z-index: 9999;
     align-items: flex-end;
 }
+
+/* Botón base */
 .contact-btn {
-    padding: 5px 20px;
+    padding: 8px 20px;
     border-radius: 8px;
     font-size: 12px;
     text-align: center;
@@ -30,79 +34,39 @@ body{
     font-weight: bold;
     cursor: pointer;
     user-select: none;
+    min-width: 120px;
+    text-decoration: none;
 }
+
+/* Colores específicos */
 .gmail-btn { background-color: #0072C6; }
 .gmail-btn:hover { background-color: #005A99; }
+
 .whatsapp-btn { background-color: #25D366; }
 .whatsapp-btn:hover { background-color: #128C7E; }
+
 .donation-btn { background-color: red; color: black; }
 .donation-btn:hover { background-color: darkred; }
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100000;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.7);
-}
-.modal-content {
-    background-color: #fff;
-    width: 300px;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    text-align: left;
-}
-.close {
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.close:hover { color: black; }
 </style>
 </head>
 <body>
 
 <div class="contact-container">
-    <!-- Gmail web -->
-    <div class="contact-btn gmail-btn" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com','_blank')">Correo</div>
+    <!-- Correo Gmail web -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sergiocuiz22@gmail.com" target="_blank" class="contact-btn gmail-btn">
+        Correo
+    </a>
 
     <!-- WhatsApp -->
-    <div class="contact-btn whatsapp-btn" onclick="window.open('https://wa.me/5491165344239','_blank')">WhatsApp</div>
+    <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn whatsapp-btn">
+        WhatsApp
+    </a>
 
-    <!-- Donación modal -->
-    <div class="contact-btn donation-btn" onclick="abrirModal()">Donación</div>
+    <!-- Donación Mercado Pago -->
+    <a href="https://www.mercadopago.com.ar/herramientas/donaciones" target="_blank" class="contact-btn donation-btn">
+        Donación
+    </a>
 </div>
-
-<!-- Modal Donación -->
-<div id="modalDonacion" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="cerrarModal()">&times;</span>
-    <h3>Donaciones vía Mercado Pago</h3>
-    <p>
-        Alias: <strong>fm.acuario.99.1mhz</strong><br>
-        CVU: <strong>0000003100089986574792</strong><br>
-        Titular: <strong>Sergio Raul Alonso</strong>
-    </p>
-  </div>
-</div>
-
-<script>
-function abrirModal() {
-    document.getElementById("modalDonacion").style.display = "block";
-}
-function cerrarModal() {
-    document.getElementById("modalDonacion").style.display = "none";
-}
-window.onclick = function(event) {
-    const modal = document.getElementById("modalDonacion");
-    if(event.target === modal) modal.style.display = "none";
-}
-</script>
 
 </body>
 </html>
