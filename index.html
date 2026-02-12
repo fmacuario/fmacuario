@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FM Acuario 99.1</title>
 
 <style>
@@ -13,7 +14,7 @@ body{
     font-family:Arial, sans-serif;
 }
 
-/* Caja reproductor de Caster.fm reducida */
+/* Reproductor Caster.fm reducido */
 .player-caster{
     position: fixed;
     right: 350px;
@@ -39,7 +40,7 @@ body{
     align-items: flex-end;
 }
 
-/* Botón base */
+/* Botones base */
 .contact-btn {
     color: white;
     text-decoration: none;
@@ -92,6 +93,34 @@ body{
     font-size: 11px;
     color: white;
     margin-top: 3px;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+    .player-caster {
+        right: 20px;
+        top: 20px;
+        transform: scale(1); /* más grande en móviles */
+    }
+    .contact-container {
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+    .contact-btn.small {
+        padding: 8px 15px;
+        font-size: 14px;
+        min-width: 100px;
+        max-width: 120px;
+    }
+    .contact-btn[href^="#donar"] {
+        padding: 8px 25px;
+        min-width: 140px;
+        font-size: 14px;
+    }
 }
 </style>
 </head>
