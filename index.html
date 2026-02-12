@@ -115,4 +115,71 @@ body{
 /* Botón cerrar */
 .close {
     color: #aaa;
-    float
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Reproductor Caster.fm -->
+<div class="player-caster">
+    <div data-type="podcastsPlayer" 
+         data-publicToken="1e20666f-d3a2-4d08-971d-358ae1c73b27" 
+         data-theme="light" 
+         data-color="e81e4d" 
+         data-channelId="a10f64e5-4d86-4c4b-8840-8d678b986344" 
+         data-rendered="false" 
+         class="cstrEmbed">
+        <a href="https://www.caster.fm">Shoutcast Hosting</a> 
+        <a href="https://www.caster.fm">Stream Hosting</a> 
+        <a href="https://www.caster.fm">Radio Server Hosting</a>
+    </div>
+    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+</div>
+
+<!-- Botones -->
+<div class="contact-container">
+    <a href="mailto:sergiocuiz22@gmail.com" class="contact-btn small">Correo</a>
+    <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn small">WhatsApp</a>
+    <a href="javascript:void(0);" class="contact-btn donation-btn" onclick="abrirModal()">Donación</a>
+</div>
+
+<!-- Modal Donación -->
+<div id="modalDonacion" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <h3>Donaciones vía Mercado Pago</h3>
+    <p>
+        Alias: <strong>fm.acuario.99.1mhz</strong><br>
+        CVU: <strong>0000003100089986574792</strong><br>
+        Titular: <strong>Sergio Raul Alonso</strong>
+    </p>
+  </div>
+</div>
+
+<script>
+function abrirModal() {
+    document.getElementById("modalDonacion").style.display = "block";
+}
+function cerrarModal() {
+    document.getElementById("modalDonacion").style.display = "none";
+}
+
+// Cerrar modal al presionar fuera de la ventana
+window.onclick = function(event) {
+    var modal = document.getElementById("modalDonacion");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
