@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>FM Acuario 99.1</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background:url("fondo.jpg") no-repeat center center;
+    background-size:cover;
+    font-family:Arial, sans-serif;
+}
+
+/* Caja reproductor de Caster.fm reducida */
+.player-caster{
+    position: fixed;
+    right: 350px;
+    top: 650px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.7);
+    padding: 8px;
+    border-radius: 10px;
+    transform: scale(0.7);
+    transform-origin: top right;
+}
+
+/* Contenedor de botones */
+.contact-container {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    align-items: flex-end;
+}
+
+/* Botón base */
+.contact-btn {
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* Botones Correo y WhatsApp */
+.contact-btn.small {
+    padding: 5px 12px;
+    font-size: 12px;
+    min-width: 80px;
+    max-width: 90px;
+}
+
+/* WhatsApp */
+.contact-btn[href^="https://wa.me"] {
+    background-color: #25D366;
+}
+.contact-btn[href^="https://wa.me"]:hover {
+    background-color: #128C7E;
+}
+
+/* Correo */
+.contact-btn[href^="mailto:"] {
+    background-color: #0072C6;
+}
+.contact-btn[href^="mailto:"]:hover {
+    background-color: #005A99;
+}
+
+/* Donación */
+.contact-btn[href^="#donar"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    min-width: 160px;
+    text-align: center;
+}
+.contact-btn[href^="#donar"]:hover {
+    background-color: darkred;
+}
+
+/* Texto dentro del botón de donación */
+.donation-text {
+    font-size: 11px;
+    color: white;
+    margin-top: 3px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Reproductor Caster.fm -->
+<div class="player-caster">
+    <div data-type="podcastsPlayer" 
+         data-publicToken="1e20666f-d3a2-4d08-971d-358ae1c73b27" 
+         data-theme="light" 
+         data-color="e81e4d" 
+         data-channelId="a10f64e5-4d86-4c4b-8840-8d678b986344" 
+         data-rendered="false" 
+         class="cstrEmbed">
+        <a href="https://www.caster.fm">Shoutcast Hosting</a> 
+        <a href="https://www.caster.fm">Stream Hosting</a> 
+        <a href="https://www.caster.fm">Radio Server Hosting</a>
+    </div>
+    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+</div>
+
+<!-- Botones de contacto y donación -->
+<div class="contact-container">
+    <a href="mailto:sergiocuiz22@gmail.com" class="contact-btn small">Correo</a>
+    <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn small">WhatsApp</a>
+    <a href="#donar" class="contact-btn">
+        Donación
+        <div class="donation-text">
+            Ayudá a que FM Acuario siga creciendo. Doná lo que quieras.
+        </div>
+    </a>
+</div>
+
+<!-- Información de donación -->
+<div id="donar" style="display:none;">
+    <p style="color:white; font-size:14px; margin:5px;">
+        Donaciones vía Mercado Pago:<br>
+        Alias: <strong>fm.acuario.99.1mhz</strong><br>
+        CVU: <strong>0000003100089986574792</strong><br>
+        Titular: <strong>Sergio Raul Alonso</strong>
+    </p>
+</div>
+
+</body>
+</html>
