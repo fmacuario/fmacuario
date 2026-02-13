@@ -9,8 +9,9 @@
         .contenedor { background:#333; padding:30px; border-radius:30px; border:3px solid #4CAF50; width:90%; max-width:400px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
         h1 { color:#4CAF50; margin-bottom:10px; font-size:28px; }
         p { margin-bottom:20px; color:#ccc; }
-        /* Estilo para que el widget se vea bien */
-        .cstrEmbed { margin: 0 auto; display: inline-block; }
+        /* Estilo para que el reproductor no se vea cortado */
+        .cstrEmbed { margin: 20px auto; min-height: 100px; }
+        .cstrEmbed a { color: #555; font-size: 10px; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -19,7 +20,9 @@
         <p>99.1 - Transmisión en Vivo</p>
 
         <div data-type="newStreamPlayer" data-publicToken="1e20666f-d3a2-4d08-971d-358ae1c73b27" data-theme="light" data-color="e81e4d" data-channelId="" data-rendered="false" class="cstrEmbed">
-            <a href="https://www.caster.fm">Shoutcast Hosting</a>
+            <a href="https://www.caster.fm">Shoutcast Hosting</a> 
+            <a href="https://www.caster.fm">Stream Hosting</a> 
+            <a href="https://www.caster.fm">Radio Server Hosting</a>
         </div>
         <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
 
