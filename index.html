@@ -49,14 +49,16 @@ h1{
     margin-top:30px;
     background:#4CAF50;
     color:white;
-    cursor: pointer;
-    border: none;
 }
 
-#estado {
-    margin-top: 10px;
+.aviso{
     font-size: 14px;
-    color: #4CAF50;
+    margin-top: 10px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 </style>
 </head>
@@ -67,38 +69,14 @@ h1{
 
 <h1>FM ACUARIO</h1>
 
-<button class="boton play" onclick="togglePlay()" id="btn-play">▶ ESCUCHAR EN VIVO</button>
-<div id="estado">Listo para transmitir</div>
+<a class="boton play" href="http://sapircast.caster.fm:19850/vHzay;" target="_blank">▶ ESCUCHAR EN VIVO</a>
+
+<div class="aviso">Se abrirá el reproductor en una pestaña nueva</div>
 
 <a class="boton" href="mailto:tucorreo@gmail.com">📧 CORREO</a>
 <a class="boton" href="https://wa.me/549XXXXXXXXXX" target="_blank">💬 WHATSAPP</a>
 
-<audio id="radio" src="http://sapircast.caster.fm:19850/vHzay;"></audio>
-
 </div>
-
-<script>
-    var audio = document.getElementById('radio');
-    var btn = document.getElementById('btn-play');
-    var estado = document.getElementById('estado');
-
-    function togglePlay() {
-        if (audio.paused) {
-            audio.load(); // Recarga el stream para evitar desfase
-            audio.play().then(() => {
-                btn.innerHTML = "⏸ PAUSAR";
-                estado.innerHTML = "Transmitiendo en vivo...";
-            }).catch(error => {
-                console.log("Error al reproducir: ", error);
-                alert("Toca otra vez para iniciar el audio");
-            });
-        } else {
-            audio.pause();
-            btn.innerHTML = "▶ ESCUCHAR EN VIVO";
-            estado.innerHTML = "Pausado";
-        }
-    }
-</script>
 
 </body>
 </html>
