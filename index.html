@@ -12,10 +12,12 @@
         .cstrEmbed { margin: 20px auto; min-height: 100px; }
         .cstrEmbed a { color: #555; font-size: 10px; text-decoration: none; }
         .botones-contacto { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; }
-        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: 0.3s; }
+        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 16px; transition: 0.3s; }
         .btn-whatsapp { background-color: #25d366; }
         .btn-email { background-color: #ea4335; }
-        .btn:hover { opacity: 0.8; }
+        .btn-donar { background-color: #ffc107; color: #000; margin-top: 5px; }
+        .btn span { font-size: 12px; font-weight: normal; margin-top: 5px; line-height: 1.4; }
+        .btn:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -32,7 +34,14 @@
 
         <div class="botones-contacto">
             <a href="https://wa.me/5491165344239" target="_blank" class="btn btn-whatsapp">Escribir al WhatsApp</a>
+            
             <a href="mailto:sergiocuiz22@gmail.com" class="btn btn-email">Enviar Correo</a>
+            
+            <div class="btn btn-donar">
+                <b>Ayudá a que la radio crezca</b>
+                <span><b>Donación (Alias):</b> fm.acuario.99.1mhz</span>
+                <span>Titular: Sergio Raul Alonso</span>
+            </div>
         </div>
     </div>
 </body>
