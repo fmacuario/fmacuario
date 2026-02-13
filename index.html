@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FM ACUARIO 99.1</title>
     <style>
-        body { margin:0; padding:0; font-family:sans-serif; background:#1a1a1a; color:white; text-align:center; display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden; }
-        .contenedor { background:#333; padding:20px; border-radius:30px; border:3px solid #4CAF50; width:95%; max-width:400px; }
-        h1 { color:#4CAF50; margin-bottom:5px; font-size:24px; }
+        body { margin:0; padding:0; font-family:sans-serif; background:#1a1a1a; color:white; text-align:center; display:flex; justify-content:center; align-items:center; height:100vh; }
+        .contenedor { background:#333; padding:20px; border-radius:30px; border:3px solid #4CAF50; width:90%; max-width:450px; }
+        h1 { color:#4CAF50; margin-bottom:20px; }
     </style>
 </head>
 <body>
     <div class="contenedor">
         <h1>FM ACUARIO</h1>
-        <p style="margin-bottom:15px;">99.1 - En Vivo</p>
+        <p>99.1 - En Vivo</p>
         
-        <iframe src="https://www.caster.fm/widgets/t1.php?js=0&login=fmacuario991" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
+        <div data-type="newStreamPlayer" data-publicToken="1e20666f-d3a2-4d08-971d-358ae" id="streamPlayer"></div>
+        <script type="text/javascript" src="https://cloud.caster.fm/widgets/new_player.js"></script>
 
-        <p style="margin-top:15px; font-size:11px; color:#aaa;">Presiona el Play en el cuadro blanco.</p>
+        <p style="margin-top:20px; font-size:12px; color:#aaa;">Presiona el botón PLAY del reproductor.</p>
     </div>
 </body>
 </html>
