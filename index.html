@@ -6,8 +6,9 @@
     <title>FM ACUARIO 99.1</title>
     <style>
         body { margin:0; padding:0; font-family:sans-serif; background:#1a1a1a; color:white; text-align:center; display:flex; justify-content:center; align-items:center; height:100vh; }
-        .contenedor { background:#333; padding:20px; border-radius:30px; border:3px solid #4CAF50; width:90%; max-width:450px; }
-        h1 { color:#4CAF50; margin-bottom:20px; }
+        .contenedor { background:#333; padding:20px; border-radius:30px; border:3px solid #4CAF50; width:95%; max-width:450px; }
+        h1 { color:#4CAF50; margin-bottom:10px; font-size:24px; }
+        iframe { border-radius: 15px; background: transparent; }
     </style>
 </head>
 <body>
@@ -15,10 +16,9 @@
         <h1>FM ACUARIO</h1>
         <p>99.1 - En Vivo</p>
         
-        <div data-type="newStreamPlayer" data-publicToken="1e20666f-d3a2-4d08-971d-358ae" id="streamPlayer"></div>
-        <script type="text/javascript" src="https://cloud.caster.fm/widgets/new_player.js"></script>
+        <iframe src="https://cloud.caster.fm/widgets/new_player.php?token=1e20666f-d3a2-4d08-971d-358ae" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
 
-        <p style="margin-top:20px; font-size:12px; color:#aaa;">Presiona el botón PLAY del reproductor.</p>
+        <p style="margin-top:15px; font-size:11px; color:#aaa;">Si dice "Offline", asegúrate de estar transmitiendo.</p>
     </div>
 </body>
 </html>
