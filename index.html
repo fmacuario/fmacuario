@@ -1,107 +1,41 @@
-<h1 style="color:red">FM ACUARIO VERSION NUEVA</h1>
-<h1 style="color:red">VERSION NUEVA SIN DONACION</h1>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>FM Acuario 99.1</title>
-
+<title>FM Acuario</title>
 <style>
-body{
-    margin:0;
-    height:100vh;
-    background:url("fondo.jpg") no-repeat center center;
-    background-size:cover;
-    font-family:Arial, sans-serif;
-}
-
-/* Caja reproductor de Caster.fm reducida */
-.player-caster{
-    position: fixed;
-    right: 350px;
-    top: 650px;
-    z-index: 9999;
-    background: rgba(0,0,0,0.7);
-    padding: 8px;
-    border-radius: 10px;
-    transform: scale(0.7);
-    transform-origin: top right;
-}
-
-/* Contenedor de botones */
-.contact-container {
-    position: fixed;
-    bottom: 30px;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    z-index: 9999;
-    font-family: Arial, sans-serif;
-    align-items: flex-end;
-}
-
-/* Botón base */
-.contact-btn {
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 12px;
-    text-align: center;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-/* Botones Correo y WhatsApp */
-.contact-btn.small {
-    padding: 5px 12px;
-    font-size: 12px;
-    min-width: 80px;
-    max-width: 90px;
-}
-
-/* WhatsApp */
-.contact-btn[href^="https://wa.me"] {
-    background-color: #25D366;
-}
-.contact-btn[href^="https://wa.me"]:hover {
-    background-color: #128C7E;
-}
-
-/* Correo */
-.contact-btn[href^="mailto:"] {
-    background-color: #0072C6;
-}
-.contact-btn[href^="mailto:"]:hover {
-    background-color: #005A99;
-}
+body{margin:0;background:#000;color:#fff;text-align:center;font-family:sans-serif}
+.bg{position:fixed;inset:0;background:url('fondo.jpg') center/cover no-repeat;z-index:-1}
+.box{position:relative;top:40vh}
+button{padding:12px 20px;font-size:16px;border:none;border-radius:8px;background:#00bcd4;color:#000;cursor:pointer}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);align-items:center;justify-content:center}
+.modal-content{background:#fff;color:#000;padding:20px;border-radius:10px;max-width:300px}
+.close{cursor:pointer;float:right;font-weight:bold}
 </style>
 </head>
-
 <body>
+<div class="bg"></div>
 
-<!-- Reproductor Caster.fm -->
-<div class="player-caster">
-    <div data-type="podcastsPlayer" 
-         data-publicToken="1e20666f-d3a2-4d08-971d-358ae1c73b27" 
-         data-theme="light" 
-         data-color="e81e4d" 
-         data-channelId="a10f64e5-4d86-4c4b-8840-8d678b986344" 
-         data-rendered="false" 
-         class="cstrEmbed">
-        <a href="https://www.caster.fm">Shoutcast Hosting</a> 
-        <a href="https://www.caster.fm">Stream Hosting</a> 
-        <a href="https://www.caster.fm">Radio Server Hosting</a>
-    </div>
-    <script src="//cdn.cloud.caster.fm//widgets/embed.js"></script>
+<div class="box">
+  <audio controls>
+    <source src="URL_DEL_STREAM" type="audio/mpeg">
+  </audio>
+  <br><br>
+  <button onclick="abrir()">Donar</button>
 </div>
 
-<!-- Botones -->
-<div class="contact-container">
-    <a href="mailto:sergiocuiz22@gmail.com" class="contact-btn small">Correo</a>
-    <a href="https://wa.me/5491165344239" target="_blank" class="contact-btn small">WhatsApp</a>
+<div id="ventana" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrar()">X</span>
+    <h3>Donaciones</h3>
+    <p>Alias: TU_ALIAS</p>
+    <p>CBU: TU_CBU</p>
+  </div>
 </div>
 
+<script>
+function abrir(){document.getElementById('ventana').style.display='flex'}
+function cerrar(){document.getElementById('ventana').style.display='none'}
+</script>
 </body>
 </html>
-
